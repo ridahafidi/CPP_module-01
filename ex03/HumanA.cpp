@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/22 21:35:41 by rhafidi           #+#    #+#             */
-/*   Updated: 2025/12/24 18:56:53 by rhafidi          ###   ########.fr       */
+/*   Created: 2025/12/24 21:22:04 by rhafidi           #+#    #+#             */
+/*   Updated: 2025/12/24 22:32:24 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "HumanA.hpp"
 
-Zombie* newZombie( std::string name)
+void    HumanA::attack()
 {
-    Zombie  *zombie;
+    std::cout << HumanA::Name << " attacks with their " 
+            << HumanA::weapon.getType() << std::endl;
+}
 
-    zombie = new Zombie;
-    zombie->set_name(name);
-    return (zombie);
+void    HumanA::setWeapon(Weapon &NewWeapon)
+{
+    HumanA::weapon = NewWeapon;
 }

@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/22 21:35:41 by rhafidi           #+#    #+#             */
-/*   Updated: 2025/12/24 18:56:53 by rhafidi          ###   ########.fr       */
+/*   Created: 2025/12/24 21:25:50 by rhafidi           #+#    #+#             */
+/*   Updated: 2025/12/24 22:29:30 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "HumanB.hpp"
 
-Zombie* newZombie( std::string name)
+void    HumanB::attack()
 {
-    Zombie  *zombie;
+    std::cout << HumanB::Name << " attacks with their ";
+    if (HumanB::weapon)
+        std::cout << HumanB::weapon->getType();
+    else
+        std::cout << "(unarmed)";
+    std::cout << std::endl;
+}
 
-    zombie = new Zombie;
-    zombie->set_name(name);
-    return (zombie);
+void    HumanB::setWeapon(Weapon &NewWeapon)
+{
+    HumanB::weapon = &NewWeapon;
 }

@@ -6,7 +6,7 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/22 21:35:59 by rhafidi           #+#    #+#             */
-/*   Updated: 2025/12/24 18:56:36 by rhafidi          ###   ########.fr       */
+/*   Updated: 2025/12/24 20:21:21 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,12 @@ int main()
         delete zombies;
         i++;
     }
+    Zombie *zombief = zombieHorde(10, "xxxxxx");
+    i = 0;
+    while (i < 9)
+    {
+        zombief[i].announce();
+        i++;
+    }
+    delete []zombief;
 }

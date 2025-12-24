@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/22 21:35:41 by rhafidi           #+#    #+#             */
-/*   Updated: 2025/12/24 18:56:53 by rhafidi          ###   ########.fr       */
+/*   Created: 2025/12/24 21:10:25 by rhafidi           #+#    #+#             */
+/*   Updated: 2025/12/24 21:13:17 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Weapon.hpp"
 
-Zombie* newZombie( std::string name)
+std::string& Weapon::getType()
 {
-    Zombie  *zombie;
+    return (Weapon::Type);
+}
 
-    zombie = new Zombie;
-    zombie->set_name(name);
-    return (zombie);
+void        Weapon::setType(std::string NewType)
+{
+    Weapon::Type = NewType;
 }
