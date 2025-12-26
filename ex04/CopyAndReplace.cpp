@@ -6,7 +6,7 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/25 15:18:52 by rhafidi           #+#    #+#             */
-/*   Updated: 2025/12/25 21:41:38 by rhafidi          ###   ########.fr       */
+/*   Updated: 2025/12/26 16:06:08 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,16 @@ void    CopyAndReplace::copy_replace(std::string &filename, std::string &s1, std
     size_t  index = 0;
     size_t  s1_len = 0;
     size_t  s2_len = s2.length();
+    std::string file_str_tmp;
+    file_str_tmp = file_str;
     file_length = file_str.length();
     if (s1.empty())
-        std::cout << "s1 is empty\n";
+        std::cerr << "s1 is empty\n";
     if (s2.empty())
-        std::cout << "s2 is empty\n";
+        std::cerr << "s2 is empty\n";
     while(true)
     {
-        LastPos = file_str.find(s1, LastPos + s1_len);
+        LastPos = file_str_tmp.find(s1, LastPos + s1_len);
         if (LastPos == std::string::npos)
             break;
         s1_len = s1.length();
@@ -49,5 +51,5 @@ void    CopyAndReplace::copy_replace(std::string &filename, std::string &s1, std
         std::cerr << "Cannot open output\n";
         return;
     }
-        outfile << file_str;  
+    outfile << file_str;  
 }
