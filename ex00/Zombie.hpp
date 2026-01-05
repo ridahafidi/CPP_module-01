@@ -6,7 +6,7 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/22 16:47:39 by rhafidi           #+#    #+#             */
-/*   Updated: 2025/12/24 18:55:11 by rhafidi          ###   ########.fr       */
+/*   Updated: 2026/01/05 21:14:19 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,12 @@ class   Zombie
     private:
         std::string name;
     public:
-        Zombie(void)  : name("NO_NAME"){};
-        Zombie(std::string n)  : name(n){};
+        Zombie(void)  : name(""){};
+        Zombie(const std::string &n)  : name(n){};
         ~Zombie();
-        // Zombie(const Zombie &other);
         void        announce(void );
         std::string &get_name(void );
-        void        set_name(std::string new_name);
+        void        set_name(const std::string &new_name);
 };
 
 Zombie* newZombie( std::string name );

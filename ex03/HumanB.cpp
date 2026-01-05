@@ -6,7 +6,7 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/24 21:25:50 by rhafidi           #+#    #+#             */
-/*   Updated: 2025/12/24 22:29:30 by rhafidi          ###   ########.fr       */
+/*   Updated: 2026/01/05 21:10:15 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void    HumanB::attack()
 {
-    std::cout << HumanB::Name << " attacks with their ";
-    if (HumanB::weapon)
-        std::cout << HumanB::weapon->getType();
+    std::cout << Name << " attacks with their ";
+    if (weapon)
+        std::cout << weapon->getType();
     else
         std::cout << "(unarmed)";
     std::cout << std::endl;
@@ -24,5 +24,5 @@ void    HumanB::attack()
 
 void    HumanB::setWeapon(Weapon &NewWeapon)
 {
-    HumanB::weapon = &NewWeapon;
+    weapon = &NewWeapon;
 }

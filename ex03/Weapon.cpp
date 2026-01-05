@@ -6,7 +6,7 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/24 21:10:25 by rhafidi           #+#    #+#             */
-/*   Updated: 2025/12/24 21:13:17 by rhafidi          ###   ########.fr       */
+/*   Updated: 2026/01/05 20:58:54 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ std::string& Weapon::getType()
     return (Weapon::Type);
 }
 
-void        Weapon::setType(std::string NewType)
+void        Weapon::setType(const std::string &NewType)
 {
-    Weapon::Type = NewType;
+    Type = NewType;
 }

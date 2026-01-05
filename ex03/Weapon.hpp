@@ -6,7 +6,7 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/24 21:07:13 by rhafidi           #+#    #+#             */
-/*   Updated: 2025/12/24 21:27:20 by rhafidi          ###   ########.fr       */
+/*   Updated: 2026/01/05 21:06:06 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,9 @@ class Weapon
         std::string Type;
     public:
         std::string &getType();
-        void        setType(std::string NewType);
+        void        setType(const std::string &NewType);
         Weapon():Type(""){};
-        Weapon(std::string NewType):Type(NewType){};
-        // ~Weapon();
+        Weapon(const std::string &NewType):Type(NewType){};
 };
 
 

@@ -6,7 +6,7 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/22 21:35:59 by rhafidi           #+#    #+#             */
-/*   Updated: 2025/12/24 18:56:36 by rhafidi          ###   ########.fr       */
+/*   Updated: 2026/01/05 21:14:07 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@ int main()
     zombie.announce();
     Zombie zombiex;
     zombiex.announce();
-    randomChump("lqlawi");
+    zombiex.set_name("xxxxxx");
+    zombiex.announce();
+    randomChump("z1");
     Zombie *zombies;
     int i = 0;
     

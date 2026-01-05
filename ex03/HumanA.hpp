@@ -6,7 +6,7 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/24 21:16:29 by rhafidi           #+#    #+#             */
-/*   Updated: 2025/12/24 22:32:14 by rhafidi          ###   ########.fr       */
+/*   Updated: 2026/01/05 21:08:04 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class HumanA
         void    attack();
         void    setWeapon(Weapon &NewWeapon);
         HumanA(Weapon &W):Name("") ,weapon(W) {};
-        HumanA(std::string N, Weapon &W):Name(N), weapon(W){};
+        HumanA(const std::string &N, Weapon &W):Name(N), weapon(W){};
         // ~HumanA();
 };
 

@@ -6,7 +6,7 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/25 15:18:52 by rhafidi           #+#    #+#             */
-/*   Updated: 2025/12/27 18:53:44 by rhafidi          ###   ########.fr       */
+/*   Updated: 2026/01/05 21:32:54 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,13 @@ void    CopyAndReplace::copy_replace(std::string &filename, std::string &s1, std
     buf << infile.rdbuf();
     std::string file_str = buf.str();
     infile.close();
+    if (infile.fail())
+        std::cerr << "Close failed\n";
     size_t  LastPos = 0;
     size_t  file_length = 0;
     size_t  s1_len = 0;
     size_t  s2_len = s2.length();
-    std::string file_str_tmp;
-    
-    file_str_tmp = buf.str();
+
     file_length = file_str.length();
     if (s1.empty())
         std::cerr << "s1 is empty\n";
@@ -52,5 +52,5 @@ void    CopyAndReplace::copy_replace(std::string &filename, std::string &s1, std
         std::cerr << "Cannot open output\n";
         return;
     }
-    outfile << file_str;  
+    outfile << file_str;
 }

@@ -6,7 +6,7 @@
 /*   By: rhafidi <rhafidi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/27 15:51:21 by rhafidi           #+#    #+#             */
-/*   Updated: 2025/12/27 18:51:18 by rhafidi          ###   ########.fr       */
+/*   Updated: 2026/01/05 21:34:43 by rhafidi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void Harl::error(void)
 }
 
 
-    struct entry
+struct entry
 {
     std::string table[4];
     entry(const char * debug, const char * info, const char * warning, const char * error)
